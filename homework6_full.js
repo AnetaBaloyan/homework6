@@ -151,7 +151,7 @@ const makeMove = function(board, loc, isX) {
             return 0;
         }
     } else {
-        nextMove(gameInfo.board, gameInfo.isX);
+        makeMove(board, nextMove(gameInfo.board, gameInfo.isX), isX);
         return -1;
     }
 };
